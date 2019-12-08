@@ -1,6 +1,6 @@
 # blogapp
 
-一个flutter开发的博客APP，管理个人网的WordPress项目。
+一个flutter开发的博客APP，关联个人网的WordPress项目。可以实现手机端管理pc站的博客
 
 ### 目前实现的功能
 
