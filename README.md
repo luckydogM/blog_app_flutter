@@ -1,6 +1,22 @@
 # blogapp
 
-A new Flutter project.
+一个flutter开发的博客APP，关联个人网的WordPress项目。可以实现手机端管理pc站的博客
+
+### 目前实现的功能
+
+#### 1.博客文章列表查看，包括下拉刷新，上拉加载。
+
+#### 2.博客文章详情页，展示支持HTML格式
+
+#### 3.新建博客
+
+## TODO
+
+#### 1.文章删除
+
+#### 2.编辑文章
+
+#### 3.新增文章支持Markdown预览
 
 ## Getting Started
 
