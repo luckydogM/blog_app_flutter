@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter_wordpress/flutter_wordpress.dart' as wp;
 import 'package:flutter_html/flutter_html.dart';
+import 'package:markdown/markdown.dart' as prefix0;
 
 main(){
   runApp(Home());
@@ -113,6 +114,7 @@ class articleListState extends State<articleList> {
           return Container(
             padding: EdgeInsets.fromLTRB(15.0, 10.0, 15.0, 8.0),
             child: GestureDetector(
+              behavior: HitTestBehavior.translucent,
               onTap: (){
                 Navigator.push(
                   context,
@@ -135,9 +137,9 @@ class articleListState extends State<articleList> {
                         fontSize: 20
                     ),
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Html(
-                      data: posts[index].excerpt.rendered.toString(),
+                      data: prefix0.markdownToHtml(posts[index].excerpt.rendered.toString()),
                       defaultTextStyle: TextStyle(
                           fontSize: 16
                       ),
@@ -145,7 +147,7 @@ class articleListState extends State<articleList> {
                         print(link);
                       }
                   ),
-                  SizedBox(height: 10),
+                  SizedBox(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
