@@ -4,9 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:bot_toast/bot_toast.dart';
 
-main(){
-  runApp(MyNotifications());
-}
+//main(){
+//  runApp(MyNotifications());
+//}
 
 class MyNotifications extends StatefulWidget {
 
@@ -24,22 +24,22 @@ class MyNotificationsState extends State<MyNotifications>{
   bool isLoading = false;
   //加载更多
   Future _loadMore() async {
-//    if (!isLoading) {
-//      if(this.mounted) {
-//        setState(() {
-//          //通过setState去更新数据
-//          isLoading = true;
-//        });
-//      }
-//    }
-//    List<MovieItem> moreList = await MoviesRequest.getMovies(_Number, pageSize);
-//    if (this.mounted) {
-//      setState(() {
-//        movieitems.addAll(moreList);
-//        isLoading = false;
-//        _Number += pageSize;
-//      });
-//    }
+    if (!isLoading) {
+      if(this.mounted) {
+        setState(() {
+          //通过setState去更新数据
+          isLoading = true;
+        });
+      }
+    }
+    List<MovieItem> moreList = await MoviesRequest.getMovies(_Number, pageSize);
+    if (this.mounted) {
+      setState(() {
+        movieitems.addAll(moreList);
+        isLoading = false;
+        _Number += pageSize;
+      });
+    }
   }
 
   @override

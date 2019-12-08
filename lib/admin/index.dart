@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-main(){
-  runApp(Admin());
-}
+//main(){
+//  runApp(Admin());
+//}
 
 class Admin extends StatelessWidget {
   @override

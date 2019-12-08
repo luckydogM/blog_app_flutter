@@ -8,10 +8,9 @@ import 'package:flutter_wordpress/flutter_wordpress.dart' as wp;
 import 'package:flutter_html/flutter_html.dart';
 import 'package:markdown/markdown.dart' as prefix0;
 
-main(){
-  runApp(Home());
-}
-
+//main(){
+//  runApp(Home());
+//}
 class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -49,6 +48,7 @@ class articleListState extends State<articleList> {
   bool isLoading = false;
 
   Future _loadMore({bool refresh}) async {
+
     BotToast.showLoading(align:Alignment.center,backgroundColor:Colors.transparent);
     if (!isLoading) {
       if (this.mounted) {
@@ -83,14 +83,6 @@ class articleListState extends State<articleList> {
 
   @override
   void initState() {
-//    BotToast.showLoading(align:Alignment.center,backgroundColor:Colors.transparent);
-//    wordPressArticleApi.myfetchPosts(_Number,pageSize).then((res){
-//      BotToast.closeAllLoading();
-//      setState(() {
-//        posts = res;
-//        _Number++;
-//      });
-//    });
     _loadMore();
     _scrollController.addListener((){
       if (_scrollController.position.pixels ==
